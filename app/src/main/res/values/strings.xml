@@ -10,4 +10,5 @@
     <string name="question_feed">Question Feed</string>
     <string name="get_money_in_your_paytm_account">Get money in your paytm account</string>
     <string name="title_activity_earn_money">EarnMoneyActivity</string>
+    <string name="title_activity_first_time_opened">FirstTimeOpened</string>
 </resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentDetails">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Details"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. What is your Graduation Stream?"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:textSize="15dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioStream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+
+        >
+
+        <RadioButton
+            android:id="@+id/radioComm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commerce"
+            android:layout_marginLeft="17dp"
+            android:onClick="checkButtonStream"
+            />
+
+        <RadioButton
+            android:id="@+id/radioArt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Art"
+            android:layout_marginLeft="17dp"
+            android:onClick="checkButtonStream"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. You are in which year?"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/radioStream"
+        android:textSize="15dp"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/radioYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+>
+
+        <RadioButton
+            android:id="@+id/radioFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First"
+            android:layout_marginLeft="17dp"
+            android:onClick="checkButtonYear"
+            />
+
+        <RadioButton
+            android:id="@+id/radioSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second"
+            android:layout_marginLeft="17dp"
+            android:onClick="checkButtonYear"/>
+        <RadioButton
+            android:id="@+id/radioThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Third"
+            android:layout_marginLeft="17dp"
+            android:onClick="checkButtonYear"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Save Details"
+        android:gravity="center"
+        android:background="@color/cardview_shadow_start_color"
+        app:layout_constraintTop_toBottomOf="@+id/radioYear"
+        android:textColor="@color/cardview_light_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:onClick="saveDetails"
+        android:enabled="false"
+        />
+
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <LinearLayout
+        android:id="@+id/banner_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/banner_container"
+        />
+
+</android.support.constraint.ConstraintLayout>

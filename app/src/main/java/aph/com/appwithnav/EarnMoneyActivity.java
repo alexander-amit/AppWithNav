@@ -4,9 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import aph.com.appwithnav.model.Student;
-import butterknife.OnClick;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
@@ -19,11 +16,10 @@ import android.widget.Toast;
 public class EarnMoneyActivity extends AppCompatActivity implements RewardedVideoAdListener {
 
     private RewardedVideoAd mRewardedVideoAd;
-    private Student st;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("earn activity","createdon");
-        //MobileAds.initialize(this, "ca-app-pub-6876139477910913~6213074548");
+        //MobileAds.initialize(this, "ca-app-pub-6876139477910913/2712813239");
         MobileAds.initialize(this, "ca-app-pub-3940256099942544/5224354917");
 
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
@@ -37,21 +33,13 @@ public class EarnMoneyActivity extends AppCompatActivity implements RewardedVide
     private void loadRewardedVideoAd() {
 
 /*
-        mRewardedVideoAd.loadAd("ca-app-pub-6876139477910913~6213074548",
+        mRewardedVideoAd.loadAd("ca-app-pub-6876139477910913/2712813239",
                 new AdRequest.Builder().build());
 */
         mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917",
                 new AdRequest.Builder().build());
     }
 
-    /*@OnClick(R.id.show_ads)
-    public void showAd()
-    {Log.i("earn_activity","show ads clicked");
-        if (rewardedVideoAd != null && rewardedVideoAd.isAdLoaded()) {
-            rewardedVideoAd.show();
-        }
-
-    }*/
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
